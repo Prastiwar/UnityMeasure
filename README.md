@@ -40,6 +40,7 @@ public class TestScript : TPTestScript
     {
         return new Action[] {
             Void, // Void is empty method from TPTestScript
+            // ()=> { MyMethod(); },
             ()=> { bool isUntagged = gameObject.tag == "Untagged"; },
             ()=> { bool isUntagged = gameObject.CompareTag("Untagged"); },
             ()=> { bool isUntagged = gameObject.tag.Equals("Untagged"); }
@@ -65,10 +66,10 @@ public class TestScript : TPTestScript
     }
 }
 ``` 
-Settings:
+#### Settings:
 ![Settings](https://i.imgur.com/d71CDZY.png)
 
-Results:
+#### Results:
 ![Results](https://i.imgur.com/DgNQwHS.png)
 
 
