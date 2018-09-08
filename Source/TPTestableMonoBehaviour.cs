@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class SomeMono : MonoBehaviour
+public class TPTestableMonoBehaviour : MonoBehaviour
 {
     public int IntField;
     public int IntProperty { get; set; }
