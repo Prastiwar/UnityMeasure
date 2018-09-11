@@ -70,6 +70,19 @@ namespace TP.Measurement
             }
         }
 
+        /// <summary> Spawns and returns array of primitives </summary>
+        protected GameObject[] SpawnGameObjects(int count, PrimitiveType type = PrimitiveType.Cube)
+        {
+            GameObject[] array = new GameObject[count];
+            GameObject copy = GameObject.CreatePrimitive(type);
+            for (int i = 0; i < count; i++)
+            {
+                array[i] = Instantiate(copy);
+            }
+            DestroyImmediate(copy);
+            return array;
+        }
+
         protected virtual Action[] GetActionsToMeasure() { return new Action[0]; }
 
         private Action[] GetMeasureActionsSafe(out int length)
